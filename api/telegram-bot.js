@@ -1,4 +1,4 @@
-const { Telegram } = require('telegraf');
+const { Telegram } = require("telegraf");
 const telegraf = new Telegram(process.env.TELEGRAM_BOT_TOKEN);
 
 module.exports = async (req, res) => {
@@ -7,6 +7,6 @@ module.exports = async (req, res) => {
   const text = message.text;
 
   await telegraf.sendMessage(chatId, `You said: ${text}`);
-  
-  res.status(200).send('OK');
-}
+
+  res.status(200).send("OK");
+};
